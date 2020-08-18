@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <TextView
+        android:id="@+id/text_number2"
+        android:layout_width="120dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="16dp"
+        android:text="Number 2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_number" />
+
+    <TextView
+        android:id="@+id/text_number"
+        android:layout_width="120dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="72dp"
+        android:text="Number1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputNumber1"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.297"
+        app:layout_constraintStart_toEndOf="@+id/text_number"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/textInputNumber2"
+        android:layout_width="254dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toEndOf="@+id/text_number2"
+        app:layout_constraintTop_toBottomOf="@+id/textInputNumber1"
+        app:layout_constraintVertical_bias="0.003" />
+
+    <Button
+        android:id="@+id/plusbutton"
+        android:layout_width="168dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="352dp"
+        android:onClick="changeFragment"
+        android:text="+"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/multiplybutton"
+        app:layout_constraintEnd_toStartOf="@+id/minusbutton"
+        app:layout_constraintHorizontal_bias="0.417"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_number2"
+        app:layout_constraintVertical_bias="0.046" />
+
+    <Button
+        android:id="@+id/minusbutton"
+        android:layout_width="164dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="360dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:onClick="changeFragment"
+        android:text="-"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toTopOf="@+id/diviosnbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputNumber2"
+        app:layout_constraintVertical_bias="0.048" />
+
+    <fragment
+        android:id="@+id/fragment4"
+        android:name="com.example.intentsproj.Dfragment"
+        android:layout_width="284dp"
+        android:layout_height="107dp"
+        app:layout_constraintBottom_toTopOf="@+id/plusbutton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.677"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputNumber2"
+        app:layout_constraintVertical_bias="0.576" />
+
+    <Button
+        android:id="@+id/multiplybutton"
+        android:layout_width="167dp"
+        android:layout_height="54dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="changeFragment"
+        android:text="*"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/diviosnbutton"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/diviosnbutton"
+        android:layout_width="162dp"
+        android:layout_height="52dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="60dp"
+        android:onClick="changeFragment"
+        android:text="/"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
